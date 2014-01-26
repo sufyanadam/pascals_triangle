@@ -1,10 +1,10 @@
 def generate_rows(n)
   rows = [[1]]
-  return rows if n < 2
+
 
   (n - 1).times do |i|
     rows << get_next_row(rows[i])
-  end
+  end if n > 1
 
   print_triangle rows
 end
